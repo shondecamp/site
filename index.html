@@ -56,6 +56,28 @@
             margin:auto;
             width:100%;
         }
+        .thumbnail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            text-decoration: none;
+            color:black;
+        }
+        .thumbnail :visited{
+            text-decoration:none;
+            color:black;
+        }
+        .thumbnail img{
+            width: 100px;
+            height: 100px;
+            border: 1px solid lightgray;
+        }
+        .list {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+        }
     }
     @media only screen and (max-width: 1800px) {
         body{
@@ -102,6 +124,28 @@
             text-align:center;
             margin:auto;
             width:100%;
+        }
+        .thumbnail{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            width: 180px;
+            text-decoration: none;
+            color:black;
+            }
+        .thumbnail :visited{
+            text-decoration:none;
+            color:black;
+        }
+        .thumbnail img{
+            width: 100px;
+            height: 100px;
+            border: 1px solid lightgray;
+        }
+        .list {
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
         }
     }
     @media only screen and (max-width: 1044px) {
@@ -200,6 +244,25 @@
             margin:0px !important;
             width:90vw !important;
         }
+        .thumbnail p{
+            font-size: 14px !important;
+            font-weight: 400 !important;
+        }
+        .thumbnail{
+            border: 1px solid lightgray !important;
+            box-shadow: 0px 0px 4px 1px lightgray;
+            margin: 10px !important;
+            padding: 15px !important;
+            width: 28vw !important;
+            height: 28vw !important;
+            text-align: center !important;
+            justify-content: space-evenly !important;
+        }
+        .thumbnail img{
+            border:none !important;
+            height: 40px !important;
+            width: 40px !important;
+        }
     }
 </style>
 </head>
@@ -214,6 +277,14 @@
     <div class="container">
         <hr>
         <h3>Projects</h3>
+        <div class="list">
+            <div>
+                <a class="thumbnail" href="https://docs.google.com/document/d/e/2PACX-1vTGyJPAIdsZR9p0-uOXwPsBpLM2S2R0JoL3AaSWAJhMDHyJqV2mTJXndyDZ7k4JixS8miOdJgOV7GO6/pub" target="_blank">
+                    <img src="Inspection_groups.png">
+                    <p>Inspection Groups</p>
+                </a>
+            </div>
+        </div>
     </div>
     <div class="container">
         <hr>
