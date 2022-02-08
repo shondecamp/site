@@ -4,7 +4,84 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">   
        
 <style>
-    
+    /* open-sans-300 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-500 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-regular - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-600 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-800 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
+/* open-sans-700 - latin */
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+  src: local(''),
+       url('../fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/open-sans-v27-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/open-sans-v27-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/open-sans-v27-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('../fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); /* Legacy iOS */
+}
     body {
         font-family: 'Open Sans', sans-serif;
         color: #272727;
@@ -128,7 +205,7 @@
         }
       
         .p1{
-            font-weight: bold;
+            font-weight: 800;
             font-size: 30px;
             margin:30px 20px;
         }
@@ -280,7 +357,7 @@
             width:100%;
         }
         .p1{
-            font-weight: bold;
+            font-weight: 800;
             font-size: 26px;
             margin:0px 20px;
         }
@@ -392,7 +469,7 @@
             width:100%;
         }
         .p1{
-            font-weight: bold !important;
+            font-weight: 800 !important;
             font-size: 26px;
             margin:0px 20px;
         }
@@ -602,9 +679,9 @@
     <div class="container">
         <hr>
         <h3>About Me</h3>
-        <p style="font-weight:lighter;">I’ve been designing digital products on cross-functional teams for 7+ years. I’m passionate about getting working software in users hands & making it delightful to use. 
-        <p style="font-weight:lighter;">That work has been primarily on enterprise solutions for native mobile, responsive web, and desktop apps. I am both a leader and a producer in full spectrum UX responsibilities - research, strategy, prototyping, user-testing, design iteration, dev collaboration, and even HTML/CSS buildout. I've also created mobile and desktop design systems. Ultimately, my design work delights users, meets business objectives, and operates within constraints.</p>
-       <p style="font-weight:lighter;">My family and I enjoy the work and fun of our hobby farm. We like to ride horses, raise bunnies, chase chickens, fix fences, and all the other projects that come with owning a couple of extra acres. We frequently find ourselves in the mountains hiking or camping. We also manage to make several summer trips to cool off in the lake.</p>
+        <p style="font-weight:300;">I’ve been designing digital products on cross-functional teams for 7+ years. I’m passionate about getting working software in users hands & making it delightful to use. 
+        <p style="font-weight:300;">That work has been primarily on enterprise solutions for native mobile, responsive web, and desktop apps. I am both a leader and a producer in full spectrum UX responsibilities - research, strategy, prototyping, user-testing, design iteration, dev collaboration, and even HTML/CSS buildout. I've also created mobile and desktop design systems. Ultimately, my design work delights users, meets business objectives, and operates within constraints.</p>
+       <p style="font-weight:300;">My family and I enjoy the work and fun of our hobby farm. We like to ride horses, raise bunnies, chase chickens, fix fences, and all the other projects that come with owning a couple of extra acres. We frequently find ourselves in the mountains hiking or camping. We also manage to make several summer trips to cool off in the lake.</p>
 
     </div>
     <div class="footer">
