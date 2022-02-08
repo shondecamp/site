@@ -7,23 +7,9 @@
     
     body {
         font-family: 'Open Sans', sans-serif;
-        color: black;
+        color: #272727;
     }
-    button{
-        width: 250px;
-        height: 60px;
-        font-size: 16px;
-        font-family: Open Sans;
-        text-transform: uppercase;
-        border: none;
-        background: #2569bb;
-        border-radius: 5px;
-        color: white;
-        font-weight: 600 !important;
-        margin: 20px 0px;
-        box-shadow: 2px 2px 3px 1px lightgrey;
-        cursor: pointer;
-    }
+   
     @media only screen and (min-width: 1801px) {
         body{
             width:70vw;
@@ -32,13 +18,53 @@
             margin-bottom: 100px;
         }
         .title{
-            height:65vh;
+            height:60vh;
             width:100%;
             margin-top: 25vh;
         }
-        .title img{
-            height:60px;
-            margin-right: 34px;
+        .buttons {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            text-decoration:none;
+        }
+        .buttons img{
+            width:44px;
+            
+        }
+        .shell{
+            width:95px;
+            text-align:center;
+        }
+        .shell2{
+            text-align:center;
+        }
+        .shell2 :hover{
+            background:#7F626F;
+            box-shadow: 0px 2px 2px #272727;
+        }
+        .resbutton{
+            background:#0267C1;
+            height: 44px;
+            color: #FFFFFF;
+            border-radius:7px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 17px;
+            width:95px;
+            margin:auto;
+            position:relative;
+            left: 20px;
+            letter-spacing:1px;
+            line-height: 44px;
+            box-shadow: 0px 2px 2px #666666;
+        }
+        .shell2 a{
+            text-decoration:none;
+        }
+        .shell a img:hover{
+            width:65px;
         }
         h1{
             font-size:95px;
@@ -72,29 +98,65 @@
         }
         .thumbnail{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            width: 180px;
+            justify-content: space-evenly;
+            width: 100%;
             text-decoration: none;
-            color:black;
-            margin-right: 80px;
-        }
+            color:#272727;
+            height: 900px;
+            border-radius: 30px;
+            margin: 30px 0px;
+            cursor: default;
+            }
         .thumbnail :visited{
             text-decoration:none;
-            color:black;
+            color:#272727;
         }
         .thumbnail img{
-            height: 140px;
-            border: 1px solid lightgray;
+            height: 700px;
+            border: none;
         }
         .list {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            flex-wrap: wrap;
         }
-        .container p{
-            font-weight: 400 !important;
-            font-size: 20px !important;
+       
+        .list div{
+            width:100%;
+        }
+      
+        .p1{
+            font-weight: bold;
+            font-size: 30px;
+            margin:30px 20px;
+        }
+        .p2{
+            font-weight: 400;
+            font-size: 22px;
+            margin: 30px 0px;
+        }
+        .thumbnail-description{
+            display:flex;
+            flex-direction:column;
+            padding:50px;
+            max-width: 600px;
+        }
+        ul {
+            margin:0px;
+        }
+        .link{
+          color:#0267C1;
+          font-size: 28px;
+          cursor:pointer;
+          font-weight: 400;
+        }
+        .link :hover{
+            font-weight: 600;
+        }
+        .link p{
+            margin:0px 20px;
         }
     }
     @media only screen and (max-width: 1800px) {
@@ -104,14 +166,54 @@
             font-weight:600 !important;
             margin-bottom: 100px;
         }
-        .title{
-            height:59vh;
+         .title{
+            height:55vh;
             width:100%;
             margin-top: 25vh;
         }
-        .title img{
-            height:44px;
-            margin-right: 34px;
+        .buttons {
+            height: 50px;
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            text-decoration:none;
+        }
+        .buttons img{
+            width:44px;
+            
+        }
+        .shell{
+            width:95px;
+            text-align:center;
+        }
+        .shell2{
+            text-align:center;
+        }
+        .shell2 :hover{
+            background:#7F626F;
+            box-shadow: 0px 2px 2px #272727;
+        }
+        .resbutton{
+            background:#0267C1;
+            height: 44px;
+            color: #FFFFFF;
+            border-radius:7px;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 17px;
+            width:95px;
+            margin:auto;
+            position:relative;
+            left: 20px;
+            letter-spacing:1px;
+            line-height: 44px;
+            box-shadow: 0px 2px 2px #666666;
+        }
+        .shell2 a{
+            text-decoration:none;
+        }
+        .shell a img:hover{
+            width:65px;
         }
         h1{
             font-size:55px;
@@ -145,28 +247,62 @@
         }
         .thumbnail{
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
             align-items: center;
-            width: 250px;
+            justify-content: space-evenly;
+            width: 100%;
             text-decoration: none;
-            color:black;
+            color:#272727;
+            height: 600px;
+            margin: 20px 0px;
             }
         .thumbnail :visited{
             text-decoration:none;
-            color:black;
+            color:#272727;
         }
         .thumbnail img{
-            height: 140px;
-            border: 1px solid lightgray;
+            height: 500px;
+            border: none;
+            padding:20px;
         }
         .list {
             display: flex;
+            flex-direction: column;
             width: 100%;
-            flex-wrap: wrap;
         }
-        .container p{
-            font-weight: 400 !important;
-            font-size: 20px !important;
+        .list a{
+            border-radius: 20px;
+        }
+       .list div :hover{
+           background: #DFE8EE;
+       }
+        .list div{
+            width:100%;
+        }
+        .p1{
+            font-weight: bold;
+            font-size: 26px;
+            margin:0px 20px;
+        }
+        .p2{
+            font-weight: 400;
+            font-size: 20px;
+            margin: 30px 0px;
+        }
+        .thumbnail-description{
+            display:flex;
+            flex-direction:column;
+            padding:50px;
+            max-width: 600px;
+        }
+        ul {
+            margin:0px;
+        }
+        .hideable{
+            display:none;
+        }
+        .hideable2{
+            display:block;
         }
     }
     @media only screen and (max-width: 1044px) {
@@ -184,6 +320,27 @@
         .title img{
             height:44px !important;;
             margin-right: 34px !important;;
+        }
+        .buttons {
+            height: 80px;
+            display: flex;
+            flex-direction: row;
+            align-items:center;
+            text-decoration:none;
+            margin: 20px 0px;
+        }
+        .resbutton{
+            height: 44px;
+            line-height:44px;
+            font-size: 17px;
+            box-shadow:none;
+            position: relative;
+            bottom: 3px;
+            left: 10px;
+        }
+        .shell img{
+            height:auto; 
+            width: auto;  
         }
         h1{
             font-size:45px !important;;
@@ -215,9 +372,35 @@
             margin:auto !important;;
             width:100% !important;;
         }
-        .container p{
-            font-weight: 400 !important;
-            font-size: 20px !important;
+        .thumbnail{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            text-decoration: none;
+            color:#272727;
+            box-shadow: 0px 0px 5px 4px #DFE8EE;
+            background:#FFFFFF;
+            margin: 20px 0px;
+            }
+            .thumbnail img{
+                width:220px;
+                height:auto;
+                padding:30px;
+            }
+        .list div{
+            width:100%;
+        }
+        .p1{
+            font-weight: bold !important;
+            font-size: 26px;
+            margin:0px 20px;
+        }
+        .hideable{
+            display:none;
+        }
+        .hideable2{
+            display:none;
         }
     }
     @media only screen and (max-width: 415px) {
@@ -231,12 +414,6 @@
             height:25vh !important;
             width:100%;
             margin-top: 10vh !important;
-        }
-        .title img{
-            height:initial !important;
-            width: 30px !important;
-            padding: 10px 10px 10px 10px !important;
-            margin:0px !important;
         }
         h1{
             font-size:26px !important;
@@ -252,44 +429,94 @@
             font-weight:600 !important;
             line-height:45px !important;
         }
-        h3{
-            font-size: 22px !important;
-            text-transform: uppercase;
-            margin:10px !important;
-            padding:0;
-            font-weight: normal !important;
+        .buttons{
+            width: 100%;
+            display:flex;
+            flex-direction:row;
+            flex-wrap:nowrap;
+            justify-content:start;
+            align-items: center;
+            height: 100px;
+        }
+        .resbutton{
+            height: 36px;
+            line-height:36px;
+            font-size: 15px;
+            box-shadow:none;
+            position: relative;
+            bottom: 8px;
+            left: 22px;
+        }
+        .shell, .shell2 {
+            display:flex !important;
+            justify-content: space-evenly !important;
+            height: 48px;
+            width: 60px;
+        }
+        .shell img{
+            margin:auto !important;
+            height: 24px !important;
+            width: auto !important;
+        }
+        .shell2 img{
+            margin:auto !important;
+            height: 24px !important;
+            width: auto !important;
         }
         h4{
             font-size: 16px !important;
             margin:0px;
             padding:0px;
         }
+        h3{
+            font-weight: 400;
+            margin: 30px 0px 15px 0px;
+        }
         .footer{
             text-align:center;
             margin:0px !important;
             width:90vw !important;
         }
-        .thumbnail p{
-            font-size: 14px !important;
-            font-weight: 400 !important;
-        }
         .thumbnail{
-            border: 1px solid lightgray !important;
-            box-shadow: 0px 0px 4px 1px lightgray;
-            margin: 10px !important;
-            padding: 15px !important;
-            width: 28vw !important;
-            height: 28vw !important;
-            text-align: center !important;
-            justify-content: space-evenly !important;
+            width:100%;
+            height:360px;
+            border-radius: 12px;
+            box-shadow: 0px 0px 4px 3px #DFE8EE; 
+            margin: 0px 0px 16px 0px;
+            background: #FFFFFF;
         }
         .thumbnail img{
-            border:none !important;
-            height: 50px !important;
+            border:none;
+            width: 150px;
+            height:auto;
+            padding: 15px;
         }
-        .container p{
-            font-weight: 400 !important;
-            font-size: 16px !important;
+        .thumbnail-description{
+            width:50%;
+            padding:15px 30px;
+            margin:0;
+        }
+        .p2 {
+            font-size: 13px;
+            margin:0;
+            padding:0;
+        }
+        .p1{
+            padding: 0px;
+            margin:0px 0px 16px 0px;
+            text-align:center;
+            font-size:18px;
+            text-align:left;
+        }
+        ul{
+            padding:0;
+            margin:0;
+        }
+        .hideable{
+            display:none;
+        }
+        .hideable2{
+            display:none;
         }
     }
 </style>
@@ -298,42 +525,71 @@
     <div class="title">
         <h1>Shon DeCamp</h1>
         <h2>UX Designer</h2>
-        <a href="https://www.linkedin.com/in/shondecamp/" target="_blank"><img src="LI-In-Bug.png"></a>
-        <a href="mailto:shondecamp@gmail.com" target="_blank"><img src="Gmail_icon.png"></a>
-        <a href="https://github.com/shondecamp/shondecamp-github.io" target="_blank"><img src="GitHub-Mark-64px.png"></a>
+        <div class="buttons">
+            <div class="shell"><a href="https://www.linkedin.com/in/shondecamp/" target="_blank"><img src="LI-In-Bug.png"></a></div>
+            <div class="shell"><a href="mailto:shondecamp@gmail.com" target="_blank"><img src="Gmail_icon.png"></a></div>
+            <div class="shell"><a href="https://github.com/shondecamp/shondecamp-github.io" target="_blank"><img src="GitHub-Mark-64px.png"></a></div>
+            <div class="shell2"><a href="Resume.pdf" target="_blank"><div class="resbutton">Resume</div></a></div>
+        </div>
     </div>
     <div class="container">
-        <hr>
+        <hr class="hideable2">
         <h3>Projects</h3>
         <div class="list">
             <div>
-                <a class="thumbnail" href="https://docs.google.com/document/d/1JSJdQnzmvBWQ9hAVWPUbQLS2eUzZan0Krv1g0d-JbYU/edit?usp=sharing" target="_blank">
-                    <img src="Checklist.png">
-                    <p>Checklist UI</p>
+                <a class="thumbnail" href="https://docs.google.com/document/d/1V5eBarZM0qBtB5Mi6AFrHulgOCchBVc_A7HN9n5hdVQ/edit?usp=sharing" target="_blank">
+                    <img src="Checklists.png">
+                    <div class="thumbnail-description">
+                        <p class="p1">Inspection Checklists</p>
+                        <ul>
+                            <li class="p2"><strong>Platform:</strong> Enterprise Mobile App</li> 
+                            <li class="p2"><strong>Goal:</strong> New User Types & Improve Usability</li> 
+                            <li class="p2"><strong>My Role:</strong> Wireframes, User Testing, High Fidelity Design, Dev Collaboration</li> 
+                        </ul> 
+                        <div class="hideable link"><p>Learn More &#8594;</p></div> 
+                    </div>
                 </a>
             </div>
             <div>
                 <a class="thumbnail" href="https://docs.google.com/document/d/e/2PACX-1vTGyJPAIdsZR9p0-uOXwPsBpLM2S2R0JoL3AaSWAJhMDHyJqV2mTJXndyDZ7k4JixS8miOdJgOV7GO6/pub" target="_blank">
-                    <img src="Inspection_groups.png">
-                    <p>Inspection Groups</p>
+                    <div class="thumbnail-description">
+                        <p class="p1">Inspection Groups</p>
+                        <ul>
+                            <li class="p2"><strong>Platform:</strong> Responsive Web App</li> 
+                            <li class="p2"><strong>Goal:</strong> Simplify UX of current functionality</li> 
+                            <li class="p2"><strong>My Role:</strong> User Journey Mapping, Design System application, High Fidelity Design </li> 
+                        </ul>  
+                        <div class="hideable link"><p>Learn More &#8594;</p></div>  
+                    </div>
+                    <img src="Inspection-Groups.png">
                 </a>
             </div>
             <div>
-                <a class="thumbnail" href="https://docs.google.com/document/d/e/2PACX-1vRetXKGbNMmM_dm_XVTb77A4KN06pY35F151O3lT-3mIZ--gIromUP4MXTv5wNOk0wOsR3ok299LBWt/pub" target="_blank">
-                    <img src="Record_assets.png">
-                    <p>Record Assets</p>
+                <a class="thumbnail" href="https://docs.google.com/document/d/171NUxA2HkHIe5O7heoQr06I4Fwe6SGutr7kLyCdo9N4/edit?usp=sharing" target="_blank">
+                    <img src="MobileDS.png">
+                    <div class="thumbnail-description">
+                        <p class="p1">Mobile Design System</p>
+                        <ul>
+                            <li class="p2"><strong>Platform:</strong> Native Mobile App</li> 
+                            <li class="p2"><strong>Goal:</strong> Standardize component styles & patterns</li> 
+                            <li class="p2"><strong>My Role:</strong> Research, Industry Best Practices, Testing, High Fidelity Design </li> 
+                        </ul>  
+                        <div class="hideable link"><p>Learn More &#8594;</p></div>  
+                    </div>
                 </a>
             </div>
             <div>
                 <a class="thumbnail" href="https://docs.google.com/presentation/d/1shBfy6WnDT4YA8XJxDxbLwVCukFTXpmKlJj4PmZL97k/edit#slide=id.p" target="_blank">
                     <img src="VITAL.png">
-                    <p>VITAL Premiums</p>
-                </a>
-            </div>
-            <div>
-                <a class="thumbnail" href="https://docs.google.com/document/d/1q4FD4iJINSyN9QO4cBnRIdpJHJ5PeYMoK19O8NX5qvI/edit?usp=sharing" target="_blank">
-                    <img src="MIRO.png">
-                    <p>Accessibility Audit</p>
+                    <div class="thumbnail-description">
+                        <p class="p1">VITAL Premiums</p>
+                        <ul>
+                            <li class="p2"><strong>Platform:</strong> Internal Web App</li> 
+                            <li class="p2"><strong>Goal:</strong> Improve Call Center Coverage</li> 
+                            <li class="p2"><strong>My Role:</strong> UX Design/Research, Product Mangement, Business Analysis </li> 
+                        </ul>  
+                        <div class="hideable link"><p>Learn More &#8594;</p></div>  
+                    </div>
                 </a>
             </div>
         </div>
@@ -341,13 +597,10 @@
     <div class="container">
         <hr>
         <h3>About Me</h3>
-        <p>I’ve been working with cross-functional teams on digital enterprise solutions for 7+ years. I have designed mobile, responsive web, and desktop applications in the government, telecommunications, and healthcare spaces. That design work has included full-cycle UX responsibilities including research, wireframes, user-testing, mock-ups, iterative design, prototypes and much more. I’ve developed a strong knowledge of human-computer interaction (HCI) and user-centered design. Ultimately, my design work delights users, meets business objectives, and operates within the technical and other constraints of my projects.</p>
-        <p>My family and I enjoy the work and fun of our hobby farm. We like to ride horses, raise bunnies, chase chickens, fix fences, and all the other projects that come with owning a couple of extra acres. We frequently find ourselves in the mountains hiking or camping. We also manage to make several summer trips to cool off in the lake.</p>
-    </div>
-    <div class="container">
-        <hr>
-        <h3>Resume</h3>
-        <a href="Resume.pdf" target="_blank"><button>Download Resume</button></a>
+        <p style="font-weight:lighter;">I’ve been designing digital products on cross-functional teams for 7+ years. I’m passionate about getting working software in users hands & making it delightful to use. 
+        <p style="font-weight:lighter;">That work has been primarily on enterprise solutions for native mobile, responsive web, and desktop apps. I am both a leader and a producer in full spectrum UX responsibilities - research, strategy, prototyping, user-testing, design iteration, dev collaboration, and even HTML/CSS buildout. I've also created mobile and desktop design systems. Ultimately, my design work delights users, meets business objectives, and operates within constraints.</p>
+       <p style="font-weight:lighter;">My family and I enjoy the work and fun of our hobby farm. We like to ride horses, raise bunnies, chase chickens, fix fences, and all the other projects that come with owning a couple of extra acres. We frequently find ourselves in the mountains hiking or camping. We also manage to make several summer trips to cool off in the lake.</p>
+
     </div>
     <div class="footer">
         <hr>
