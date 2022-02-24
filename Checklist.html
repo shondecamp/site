@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
+        <style>
+                /* open-sans-300 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url('./fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-500 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url('./fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-regular - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-600 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url('./fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-800 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url('./fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-700 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
+                url('./fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
+                url('./fonts/open-sans-v27-latin-700.woff') format('woff'), 
+                url('./fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
+                url('./fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #272727;
+            }
+        
+            @media only screen and (min-width: 1801px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 22px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 20px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:90px;
+                    margin:0 0 20px 0;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:700px;
+                    padding: 65px;
+                    position:fixed;
+                }
+                .paragraph{
+                    font-size: 22px;
+                    line-height: 30px;
+                    font-weight:300;
+                    padding:20px 0px;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 60px;
+                    max-width: 1200px;
+                    position:absolute;
+                    left: calc(700px + .375*((100vw - 700px) - 1200px));
+            
+                    }
+                .exhibit img{
+                    max-height: 400px;
+                    border: 1px solid lightgray;
+                    margin: 7px 7px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1800px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:575px;
+                    padding: 20px 40px;
+                    position:fixed;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 40px 40px 60px 60px;
+                    max-width: 900px;
+                    position:absolute;
+                    left:40vw;
+            
+                    }
+                .exhibit img{
+                    max-height: 400px;
+                    border: 1px solid lightgray;
+                    margin: 7px 7px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    border: 1px solid lightgray;
+                    margin: 7px 7px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding:40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    height: auto;
+                    max-width:none;
+                    border: 1px solid lightgray;
+                    margin: 10px 10px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 415px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px 40px 0px 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: none;
+                    height: auto;
+                    max-width:95%;
+                    width:95%;
+                    border: 1px solid lightgray;
+                    margin: 20px 0px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <a href="https://shondecamp.github.io/site/"><button >&#8592;Back to Home Page</button></a>
+        <h2>Mobile Checklists</h2>
+        <div class="paragraph">
+            <p>Inspectors in the field were favoring paper & clipboard checklists for the ease of simply ticking boxes during an inspection.</p>
+            <p>Going in and out of action sheets for dozens of checklist items was time consuming, redundant, and error prone.</p>    
+            <p>At the end of the day, inspectors would bring their clipboard back to the office to do their data entry. This meant fewer inspections completed/day and lower revenue.</p>
+            <p>I conducted moderated user tests with wireframes for many concepts to learn more from users.</p>
+            <p>Concepts like gestures, carousels, and horizontal scrolling failed with users, but this research supplied inspiration for a dynamic status button.</p>
+            <p>A dynamic status selector would show a general “Set Status” button when statuses were too numerous. It would show individual buttons for each status when space permitted. </p>
+            <p>I also designed fixes to meet Accessibility standards in regards to font size, color contrast, color-only indicators and tap target sizes.</p>
+        </div>
+        <a href="https://shondecamp.github.io/site/"><button>Next Project&#8594;</button></a>
+    </div>
+    <div class="exhibit">
+        <img src="Clipboard.png">
+        <img src="Oldchecklist.png">
+        <img src="ActionSheet.png">
+        <img src="More.png">
+        <img src="Carousel.png">
+        <img src="HorizontalScroll.png">
+        <img src="Statuses.png">
+        <img src="Descriptions.png">
+        <img src="Errors.png">
+        <img src="GridList.png">
+        <img src="Violation.png">
+        <img src="Attachments.png">
+        <img src="AttachmentsError.png">
+        <img src="Modal.png">
+        <img src="ModalError.png">
+        <img src="Checklists.png">
+        <img src="Tablet1.png">
+        <img src="Tablet2.png">
+        <img src="NewTablet.png">
+        <img src="NewTabletP.png">
+    </div>   
+</body>
+</html>
