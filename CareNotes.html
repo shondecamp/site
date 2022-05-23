@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
+        <style>
+                /* open-sans-300 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url('./fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-500 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url('./fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-regular - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-600 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url('./fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-800 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url('./fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-700 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
+                url('./fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
+                url('./fonts/open-sans-v27-latin-700.woff') format('woff'), 
+                url('./fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
+                url('./fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #272727;
+            }
+        
+            @media only screen and (min-width: 1801px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 22px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 20px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:90px;
+                    margin:0 0 20px 0;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:100%;
+                    padding: 65px;
+                    position:relative;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                    margin-bottom: 100px;
+                }
+                .paragraph img{
+                    width:40%;
+                    filter: drop-shadow(0px 0px 5px lightgrey);
+                    border-radius:7px;
+                    margin: 20px 0px;
+                }
+                p{
+                    width: 60%;
+                    font-size: 22px;
+                    line-height: 24px;
+                    font-weight:300;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1800px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:100%;
+                    padding: 20px 40px;
+                    position:relative;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                    margin-bottom: 100px;
+                }
+                .paragraph img{
+                    width:60%;
+                    filter: drop-shadow(0px 0px 5px lightgrey);
+                    border-radius:7px;
+                    margin: 20px 0px;
+                }
+                p{
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .blurb {
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    border: 1px solid lightgray;
+                    margin: 7px 7px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding:40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    height: auto;
+                    max-width:none;
+                    border: 1px solid lightgray;
+                    margin: 10px 10px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 415px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px 40px 0px 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .paragraph img{
+                    width:100%;
+                }
+                p{
+                    width:100%;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: none;
+                    height: auto;
+                    max-width:95%;
+                    width:95%;
+                    border: 1px solid lightgray;
+                    margin: 20px 0px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><button >&#8592;Back to Home Page</button></a>
+        <h2>CareNotes</h2>
+        <p>This paper might provide a good idea of how I work. At Interactive Care I was brought on as the sole UX resource in the effort of developing this venture company’s very first product.
+        </p>
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Gathering Data</h3>
+                <p>I started at ground zero for UX research. I had to develop a data sub-structure on which to build foundational artifacts like job maps, user journeys, and personas. I started with qualitative data gathering - <strong>contextual inquiries and interviews.</strong>  
+                </p>
+            </div>
+            <img src="data.png">
+            <p><strong>What I did well:</strong> Capturing and organizing data</p>
+            <p><strong>What I could have done better:</strong> Distilling and sharing data</p>
+        </div> 
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Synthesizing & Validating foundational artifacts</h3>
+                <p>I employed <a href="https://drive.google.com/file/d/1Nuee4-Tj6HW57HQenVcCZE7ROKGG2KXV/view?usp=sharing">Strategyn’s spin</a> on Jobs-to-be-done to draft Home Health Nurses’ job and metrics for success as they pertained to collaboration and communication. 
+                </p>
+                <p>Having been on ride-alongs with several Nurses I was able to form key <strong>personas</strong> like Nurse Nancy and Patty Patient.</p>
+            </div>
+            <img src="persona.png">
+            <p>I also developed Core functional job maps for most of the players in the Home Health space, again using Strategyn’s structure for Jobs-to-be-done.</p>
+            <img src="jtbds.png">
+            <p>I used qualtrics surveys deployed directly to known HH Agencies. I also deployed surveys through Home Health associations’ newsletters and email campaigns. These surveys were targeted at testing the validity of my job maps and assumed priorities. See a copy of one of the survey question lists <a href="https://www.google.com/url?q=https://docs.google.com/document/d/1vRi86I3FKe3z15mx9ZMKZ9m_224i5I7Xwf3S2Y7XN1U/edit?usp%3Dsharing&sa=D&source=editors&ust=1653332105550445&usg=AOvVaw0Utq43WrG-IAyeikUl0jJg">HERE</a>. </p>
+            <p><strong>What I did well:</strong> Got actionable data for users’ task and process needs</p>
+            <p><strong>What I could have done better:</strong> Didn’t get good data for users’ emotional and self-actualization needs  </p>
+        </div> 
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Generating & Testing concepts</h3>
+                <p>These foundational artifacts prepared me to lead ideation and solutioning studios. I engaged salespeople, subject-matter-experts, and executive leadership to digest the research and conceptualize using a business model canvas
+                </p>
+            </div>
+            <img src="businesscanvas.png">
+            <p>To help this process I conducted card sorting exercises with pilot partner home health agencies.</p>
+            <img src="cardsort.png">
+            <p>The choice was made to develop a solution whose first iteration would facilitate communication among clinicians within a given agency - replacing emails, text, calls, etc with a HIPAA compliant, encrypted solution. </p>
+            <p><strong>What I did well:</strong> Eliciting cross-functional engagement, input, and feedback</p>
+            <p><strong>What I could have done better:</strong> Documenting strategic decisions for posterity</p>
+        </div> 
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Wireframing & Prototyping solutions</h3>
+                <p>I started with grayscale wireframes and tested them with two dozen nurses using …
+                </p>
+                <ul>
+                    <li>Paper prototypes</li>
+                    <li>Moderated Adobe XD prototypes</li>
+                    <li>Unmoderated tests on www.usertesting.com</li>
+                </ul>
+            </div>
+            <img src="grayscale.png">
+            <p><strong>What I did well:</strong> Very thorough testing and iteration</p>
+            <p><strong>What I could have done better:</strong> I wish I had done video recordings of my in-person tests</p>
+        </div> 
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>High-fidelity Designs & Prototypes</h3>
+                <p>With well-tested designs and clear metrics for success I assembled high-fidelity prototypes using existing branding guidelines for general color and style choices.
+                </p>
+            </div>
+            <img src="carenotesfeed.png"><br>
+            <img src="callflow.png">
+            <p><strong>What I did well:</strong> Generating an attractive UI that required minimal framework customization</p>
+            <p><strong>What I could have done better:</strong> Built out a basic design system first</p>
+        </div> 
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Dev Collaboration</h3>
+                <p>InteractiveCare had not developed a Design System yet, so I had to work with developers using a Material library on Angular to achieve our desired front-end solution. In some cases I developed HTML/CSS prototypes to assist developers in achieving 100% fidelity to design.
+                </p>
+            </div>
+            <img src="code.png">
+            <p><strong>What I did well:</strong> Clearly communicated design needs to developers</p>
+            <p><strong>What I could have done better:</strong> In this case, I think recordings of prototype interactions would have helped developers.</p>
+        </div> 
+        <a href="https://shondecamp.github.io/site/"><button>Next Project&#8594;</button></a>
+    </div>
+   
+      
+   
+    
+</body>
+</html>
