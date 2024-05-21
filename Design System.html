@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
+        <style>
+                /* open-sans-300 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url('./fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-500 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url('./fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-regular - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-600 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url('./fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-800 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url('./fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-700 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
+                url('./fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
+                url('./fonts/open-sans-v27-latin-700.woff') format('woff'), 
+                url('./fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
+                url('./fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #272727;
+            }
+        
+            @media only screen and (min-width: 1801px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 22px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 20px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:90px;
+                    margin:0 0 20px 0;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:65%;
+                    padding: 0px 30px;
+                    height: 100vh;
+                    overflow: scroll;
+                }
+                .paragraph{
+                    font-size: 22px;
+                    line-height: 30px;
+                    font-weight:300;
+                    padding:20px 0px;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    padding:0px;              
+                    width:35%;
+            
+                    }
+                .exhibit img{
+                    width:90%;
+                    border: 1px solid lightgray;
+                    margin: auto;
+                    margin: 30px auto;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1800px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:65%;
+                    padding: 0px 30px;
+                    height: 100vh;
+                    overflow: scroll;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    padding:0px;              
+                    width:35%;
+             
+            
+                    }
+                .exhibit img{
+                    width:90%;
+                    border: 1px solid lightgray;
+                    margin: 30px auto;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 0px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+               
+            
+                    }
+                .exhibit img{
+                    width:calc(100%-60px);
+                    border: 1px solid lightgray;
+                    margin: 30px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding:40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 0px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                
+            
+                    }
+                .exhibit img{
+                    width:calc(100%-60px);
+                    border: 1px solid lightgray;
+                    margin: 30px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 415px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px 40px 0px 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                  
+            
+                    }
+                .exhibit img{
+                    max-height: none;
+                    height: auto;
+                    max-width:95%;
+                    width:95%;
+                    border: 1px solid lightgray;
+                    margin: 20px 0px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+        </style>
+</head>
+<body style="margin:0px; padding:0px;">
+    <div style="display:flex; flex-direction:row;margin:0px; padding:0px;">
+    <div class="container">
+        <a href="index.html"><button style="padding-top:30px;">&#8592;Back to Home Page</button></a>
+        <h2>Design System Rebuild</h2>
+        <div class="paragraph">
+            <p>The existing design system had been at a proof-of-concept stage for several years. It was created quickly with a skeleton set of components. It required a lot of custom design and implementation work. The existing design system also did not explicitly support any level of accessiblity.</p>
+            <p><strong>Objectives:</strong><br>
+                <ol>
+                    <li>Create Cleaner Code</li>
+                    <li>Simplify Design System Maintenance and Development</li>
+                    <li>Support a consistent, modern, rapidly developing UI</li>
+                </ol>
+            </p> 
+            <p><strong>Key Results:</strong><br>
+                <ol>
+                    <li>Increased front-end dev velocity 75%</li>
+                    <li>Increased design system dev velocity 75%</li>
+                    <li>Level AA WCAG (web content accessibility guidelines)</li>
+                    <li>Improved SUS (system usability score) 50%</li>
+                </ol>
+            </p>     
+            <p><strong>Jobs-to-be-done:</strong><br>
+                <p>Designers</p>
+                <ul>
+                    <li>Communicate front-end functinoality, styles, and behavior to the cross-functional team</li>
+                    <li>Create, change, and remove Design System content</li>
+                </ul>
+                <p>Design System Technologists</p>
+                <ul>
+                    <li>Define code, implementation, and accessibility for front-end development</li>
+                    <li>Create, change, and remove Design System content</li>
+                </ul>
+                <p>Front-end Developers</p>
+                <ul>
+                    <li>Implement UI components, patterns, and page layouts for production applications</li>
+                </ul>
+                <p>Product Managers</p>
+                <ul>
+                    <li>Confirm consistency between designs and requirements</li>
+                </ul>
+            </p>  
+            <p><strong>A Design-first Approach</strong><br> 
+            <p>A major pitfall of the previous design system and risk for the future of the new one was investing resources in Design System content that wouldn't be used, or would need to be changed before it could be implemented.<br>
+                I chose to require a design-first approach to populating the Design System backlog. The only items added to the Design System woudl be those needed
+                to develop established designs.<br> This required that designers understood our component library very well and that our Figma library was consistent with both the component library and our styles/theme.
+            </p>    
+            <p><strong>Keeping things simple (as possible)</strong><br> 
+                <p>In order to move quickly and cleanly, the Design System theme/styles needed to adapt quickly and easily. New versions of the 3rd party component library and developmet platform could
+                    not be allowed to break the Design System. I made the strategic choice to work within the component library's variables and properties by adopting and modifying their theme, essentially speaking
+                    the same language as the component library. This allowed styles to map universally even after changes or updates.<br>
+                    Custom assets of any kind presented a risk to strain resources in the future, however the front-end architecutre did not meet accessibility requirements.
+                    I created a responsibility assignment matrix using the RACI (Responsible, Accountable, Consulted, Informed) model and a change management process.<br>
+                    To this point the Design System had not operated as it's own program. Working with the Program Management team and Product Managers I established
+                    the Design System as its own program within Accela's product organization. This created the accountability, orgainzation, and transparency required
+                    to create the gravity necessary for resource allocation and roadmap adaptation.
+                </p>  
+                <p><strong>Focusing On Outcomes</strong><br> 
+                    <p>While much effort was spent on evangelizing the Design System program and coordinating with cross-functional teams, I knew that output was the most important factor
+                        in establishing the new Design System.<br>
+                        I kept the Design Team focused on establishing the Figma, Storybook, and other Design System assets. These were shown in every company demo regardless of status.
+                    </p>    
+        </div>
+        <a href="https://shondecamp.github.io/site/"><button style="padding-bottom:30px;">Next Project&#8594;</button></a>
+    </div>
+    <div class="exhibit">
+        <img src="Storybook.png">
+        <img src="Prime.jpg">
+        <img src="Angular.png">
+    </div>   
+</div>
+</body>
+</html>
