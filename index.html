@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">   
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
        
 <style>
+    .old-standard-tt-regular {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.old-standard-tt-bold {
+  font-family: "Old Standard TT", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.old-standard-tt-regular-italic {
+  font-family: "Old Standard TT", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
     /* open-sans-300 - latin */
 @font-face {
   font-family: 'Open Sans';
@@ -165,7 +186,10 @@
             padding:0px;
             font-weight:300 !important;
             line-height:164px;
-            font-family: 'Open Sans', sans-serif;
+            font-family: "Old Standard TT", serif;
+            background-image: linear-gradient(60deg, #FF6B00, #CD02D1);
+            background-clip: text;
+            color: transparent;
         }
         h3{
             font-size: 30px;
