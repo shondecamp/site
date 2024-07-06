@@ -383,6 +383,7 @@
             font-family: 'Open Sans', sans-serif;
             align-items:center;
             background-color:#FFFFFF;
+            padding:0px 20px;
             }
             .thumbnail2{
             display: flex;
@@ -404,10 +405,14 @@
             text-decoration:none;
             color:#272727;
         }
+        .thumbnail div{
+            margin:auto;
+        }
         .thumbnail img{
             height: 300px;
             border: none;
             padding:20px;
+            max-width:400px;
         }
         .list {
             display: flex;
@@ -452,10 +457,6 @@
         }
         .little{
             height:200px !important;
-        }
-        .wide{
-            max-width: 300px;
-            height: 150px !important;
         }
         .howiwork{
            max-width: 450px;
@@ -725,7 +726,7 @@
         <div class="list">
             <div>
                 <a class="thumbnail" href="Design System.html">
-                    <div class="wide"><img src="Accela Design System.svg"></div>
+                    <div><img src="Accela Design System.svg"></div>
                     <div class="thumbnail-description">
                         <p class="p1">Design System Overhaul</p>
                         <ul>
