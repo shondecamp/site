@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
+        <style>
+                /* open-sans-300 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 300;
+            src: url('./fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-500 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 500;
+            src: url('./fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-regular - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 400;
+            src: url('./fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-600 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 600;
+            src: url('./fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-800 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 800;
+            src: url('./fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('./fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+                url('./fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('./fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+            }
+            /* open-sans-700 - latin */
+            @font-face {
+            font-family: 'Open Sans';
+            font-style: normal;
+            font-weight: 700;
+            src: url('./fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+            src: local(''),
+                url('./fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
+                url('./fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
+                url('./fonts/open-sans-v27-latin-700.woff') format('woff'), 
+                url('./fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
+                url('./fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
+            }
+            body {
+                font-family: 'Open Sans', sans-serif;
+                color: #272727;
+            }
+        
+            @media only screen and (min-width: 1801px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 22px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 20px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:90px;
+                    margin:0 0 20px 0;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:100%;
+                    padding: 65px;
+                    position:relative;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                    margin-bottom: 100px;
+                }
+                .paragraph img{
+                    width:40%;
+                    filter: drop-shadow(0px 0px 5px lightgrey);
+                    border-radius:7px;
+                    margin: 20px 0px;
+                }
+                p{
+                    width: 60%;
+                    font-size: 22px;
+                    line-height: 24px;
+                    font-weight:300;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1800px) {
+                body{
+                    margin-bottom: 100px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width:100%;
+                    padding: 20px 40px;
+                    position:relative;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    max-width: 90%;
+                    padding-top: 0px;
+                    margin-bottom: 100px;
+                }
+                .paragraph img{
+                    width:60%;
+                    filter: drop-shadow(0px 0px 5px lightgrey);
+                    border-radius:7px;
+                    margin: 20px 0px;
+                }
+                p{
+                    width: 60%;
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .blurb {
+                    width: 100%;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap:wrap;
+                    align-items: baseline;
+                    padding: 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    border: 1px solid lightgray;
+                    margin: 7px 7px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 1200px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding:40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: row;
+                    flex-wrap: wrap;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: 350px;
+                    height: auto;
+                    max-width:none;
+                    border: 1px solid lightgray;
+                    margin: 10px 10px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+            @media only screen and (max-width: 415px) {
+                body, html{
+                    font-family: 'Open Sans', sans-serif;
+                    margin:0;
+                    padding:0;
+                }
+                button{
+                    color:#0267c1;
+                    font-size: 18px;
+                    font-weight: 400;
+                    border: none;
+                    background: transparent;
+                    margin:0px 0px 45px 0px;
+                    padding:0px 40px 0px 0px;
+                    font-family: 'Open Sans', sans-serif;
+                    cursor: pointer;
+                    margin-bottom:12px;
+                    height: 48px;
+                }
+                .container button:hover{
+                    font-weight:600;
+                }
+                h1{
+                    font-size:75px;
+                    margin:0 0 60px 0;
+                    padding:0;
+                    font-weight:500 !important;
+                    line-height: 55px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h2{
+                    font-size:50px;
+                    margin:0px 0px 20px 0px;
+                    padding:0px;
+                    font-weight:300 !important;
+                    line-height:60px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                h3{
+                    font-size: 26px;
+                    text-transform: uppercase;
+                    margin:20;
+                    padding:0;
+                    font-family: 'Open Sans', sans-serif;
+                    font-weight:400;
+                }
+                h4{
+                    font-size: 20px;
+                    margin:0px;
+                    padding:0px;
+                    font-family: 'Open Sans', sans-serif;
+                }
+                .container{
+                    width: 100%;
+                    padding: 40px 40px 0px 40px;
+                    box-sizing: border-box;
+                    position:relative;
+                    margin:0px !important;
+                }
+                .paragraph{
+                    font-size: 18px;
+                    line-height: 24px;
+                    font-weight:300;
+                    width: 100%;
+                    padding-top: 0px;
+                    margin:0;
+                    max-width:none;
+                }
+                .paragraph img{
+                    width:100%;
+                }
+                p{
+                    width:100%;
+                }
+                .exhibit{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    padding: 0px 40px 40px 40px;
+                    margin:0px;
+                    width: 100%;
+                    max-width: none;
+                    position:relative;
+                    left:auto;
+                    box-sizing:border-box
+            
+                    }
+                .exhibit img{
+                    max-height: none;
+                    height: auto;
+                    max-width:95%;
+                    width:95%;
+                    border: 1px solid lightgray;
+                    margin: 20px 0px;
+                }
+                .footer{
+                    text-align:center;
+                    margin:auto;
+                    width:100%;
+                    font-family: 'Open Sans', sans-serif;
+                }
+            }
+        </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html"><button >&#8592;Back to Home Page</button></a>
+        <h2>Re-Architecting a Workforce and Accessibility Platform</h2>
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Overview</h3>
+                <p>Led UX and product design for a large-scale re-architecture of scheduling and communication platforms supporting accessibility services for deaf and hard-of-hearing users.
+                </p>
+            </div>
+        </div>
+        <div class="paragraph">
+            <div class="blurb">
+                <h3>Context</h3>
+                <p>The platform needed to balance:
+                  <ul>
+                    <li>Workforce forecasting</li>
+                    <li>Labor law compliance</li>
+                    <li>Accessibility requirements</li>
+                    <li>Real-time scheduling constraints</li>
+                  </ul>
+                  Legacy systems created inefficiencies and limited scalability.
+                </p>
+            </div>
+          </div>
+          <div class="paragraph">
+            <div class="blurb">
+                <h3>My Role</h3>
+                <p>Product manager and lead designer responsible for:
+                  <ul>
+                    <li>UX strategy and system redesign</li>
+                    <li>Workflow and interaction design</li>
+                    <li>Stakeholder alignment</li>
+                    <li>Prototyping and validation</li>
+                  </ul>
+                </p>
+            </div>
+          </div>
+          <div class="paragraph">
+            <div class="blurb">
+                <h3>Approach</h3>
+                <p>
+                  <ul>
+                    <li>Mapped end-to-end workforce workflows</li>
+                    <li>Identified friction and failure points</li>
+                    <li>Designed forecasting-driven scheduling tools</li>
+                    <li>Built prototypes to validate with stakeholders</li>
+                    <li>Partnered with engineering on implementation</li>
+                  </ul>
+                </p>
+            </div>
+          </div>
+          <div class="paragraph">
+            <div class="blurb">
+                <h3>Impact</h3>
+                <p>
+                  <ul>
+                    <li>Reduced downtime by 65% after system redesign</li>
+                    <li>Improved onboarding and adoption</li>
+                    <li>Enabled scalable scheduling and forecasting</li>
+                    <li>Supported accessibility-focused communication tools</li>
+                  </ul>
+                </p>
+            </div>
+          </div>
+          <div class="paragraph">
+            <div class="blurb">
+                <h3>Why This Matters</h3>
+                <p>This work required balancing technical, regulatory, and user constraints while redefining core system architecture and experience.
+                </p>
+            </div>
+          </div>
+        </div> 
+        <a href="index.html"><button >&#8592;Back to Home Page</button></a>
+    </div>
+   
+      
+   
+    
+</body>
+</html>
