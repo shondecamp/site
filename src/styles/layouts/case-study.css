@@ -3,7 +3,7 @@
    (section heading and intro), .rowpic (row of images) and .exhibit (image
    gallery shown beside the text on wide screens, wrapped with it in .cs-split). */
 
-.cs-body { max-width: var(--width-page); margin: 0 auto; padding: var(--space-6) var(--gutter) 0; }
+.cs-body { max-width: var(--width-page); margin: 0 auto; padding: var(--space-7) var(--gutter) 0; }
 
 .cs-body .container { max-width: 48rem; }
 .cs-body > .container { margin-inline: auto; }
@@ -14,7 +14,7 @@
 .cs-body .blurb { margin-bottom: var(--space-4); }
 .cs-body h3 { font-size: var(--text-xl); margin: 0 0 var(--space-3); }
 .cs-body h3::first-letter { text-transform: uppercase; }
-.cs-body .paragraph > p > strong:first-child { font-family: var(--font-display); font-size: var(--text-lg); font-weight: var(--weight-medium); color: var(--color-ink); }
+.cs-body .paragraph > p > strong:first-child { font-family: var(--font-display); font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-ink); }
 
 .cs-body .paragraph img,
 .cs-body .rowpic img,

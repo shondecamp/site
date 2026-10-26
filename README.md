@@ -38,7 +38,7 @@ Every page keeps its original URL, for example `/CareNotes.html` and `/Design Sy
 
 Every color, font size and spacing value is a token in `src/styles/tokens.css`. Change a token and every page follows. To see all tokens and components in one place, open [/styleguide.html](https://shondecamp.com/styleguide.html) (it is not linked from the site and is hidden from search engines).
 
-In page bodies (plain HTML) use the component classes, for example `class="ds-btn ds-btn--primary"` for a button, `ds-tag` for a tag, `ds-card` for a card and `ds-section-title` on a home section heading. Fonts (Fraunces for headings, Inter for text) are installed with npm and served from the site itself.
+In page bodies (plain HTML) use the component classes, for example `class="ds-btn ds-btn--primary"` for a button, `ds-tag` for a tag, `ds-card` for a card and `ds-section-title` on a home section heading. Fonts (Space Grotesk for headings, Inter for text) are installed with npm and served from the site itself.
 
 ## Editing in the browser (no setup)
 
