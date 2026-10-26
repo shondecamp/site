@@ -1,0 +1,36 @@
+---
+// Shared <head> for every page. Edit site-wide meta, fonts and favicon here once.
+interface Props {
+  title: string;
+  description?: string;
+  bodyStyle?: string;
+}
+
+const {
+  title,
+  description = 'Portfolio of Shon DeCamp.',
+  bodyStyle,
+} = Astro.props;
+// Match the sitemap: clean URLs without .html (GitHub Pages serves both forms).
+const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), Astro.site);
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Shon DeCamp" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <slot name="head" />
+  </head>
+  <body style={bodyStyle}>
+    <slot />
+  </body>
+</html>

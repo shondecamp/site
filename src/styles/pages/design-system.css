@@ -1,85 +1,80 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0"/>   
-        <style>
                 /* open-sans-300 - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 300;
-            src: url('./fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-300.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('./fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
-                url('./fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
-                url('./fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('./fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
+                url('/fonts/open-sans-v27-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('/fonts/open-sans-v27-latin-300.woff2') format('woff2'), /* Super Modern Browsers */
+                url('/fonts/open-sans-v27-latin-300.woff') format('woff'), /* Modern Browsers */
+                url('/fonts/open-sans-v27-latin-300.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('/fonts/open-sans-v27-latin-300.svg#OpenSans') format('svg'); /* Legacy iOS */
             }
             /* open-sans-500 - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 500;
-            src: url('./fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-500.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('./fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
-                url('./fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
-                url('./fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('./fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
+                url('/fonts/open-sans-v27-latin-500.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('/fonts/open-sans-v27-latin-500.woff2') format('woff2'), /* Super Modern Browsers */
+                url('/fonts/open-sans-v27-latin-500.woff') format('woff'), /* Modern Browsers */
+                url('/fonts/open-sans-v27-latin-500.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('/fonts/open-sans-v27-latin-500.svg#OpenSans') format('svg'); /* Legacy iOS */
             }
             /* open-sans-regular - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 400;
-            src: url('./fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-regular.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('./fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
-                url('./fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
-                url('./fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('./fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
+                url('/fonts/open-sans-v27-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('/fonts/open-sans-v27-latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+                url('/fonts/open-sans-v27-latin-regular.woff') format('woff'), /* Modern Browsers */
+                url('/fonts/open-sans-v27-latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('/fonts/open-sans-v27-latin-regular.svg#OpenSans') format('svg'); /* Legacy iOS */
             }
             /* open-sans-600 - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 600;
-            src: url('./fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-600.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('./fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
-                url('./fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
-                url('./fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('./fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
+                url('/fonts/open-sans-v27-latin-600.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('/fonts/open-sans-v27-latin-600.woff2') format('woff2'), /* Super Modern Browsers */
+                url('/fonts/open-sans-v27-latin-600.woff') format('woff'), /* Modern Browsers */
+                url('/fonts/open-sans-v27-latin-600.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('/fonts/open-sans-v27-latin-600.svg#OpenSans') format('svg'); /* Legacy iOS */
             }
             /* open-sans-800 - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 800;
-            src: url('./fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-800.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-                url('./fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
-                url('./fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
-                url('./fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
-                url('./fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
+                url('/fonts/open-sans-v27-latin-800.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+                url('/fonts/open-sans-v27-latin-800.woff2') format('woff2'), /* Super Modern Browsers */
+                url('/fonts/open-sans-v27-latin-800.woff') format('woff'), /* Modern Browsers */
+                url('/fonts/open-sans-v27-latin-800.ttf') format('truetype'), /* Safari, Android, iOS */
+                url('/fonts/open-sans-v27-latin-800.svg#OpenSans') format('svg'); /* Legacy iOS */
             }
             /* open-sans-700 - latin */
             @font-face {
             font-family: 'Open Sans';
             font-style: normal;
             font-weight: 700;
-            src: url('./fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
+            src: url('/fonts/open-sans-v27-latin-700.eot'); /* IE9 Compat Modes */
             src: local(''),
-                url('./fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
-                url('./fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
-                url('./fonts/open-sans-v27-latin-700.woff') format('woff'), 
-                url('./fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
-                url('./fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
+                url('/fonts/open-sans-v27-latin-700.eot?#iefix') format('embedded-opentype'), 
+                url('/fonts/open-sans-v27-latin-700.woff2') format('woff2'), 
+                url('/fonts/open-sans-v27-latin-700.woff') format('woff'), 
+                url('/fonts/open-sans-v27-latin-700.ttf') format('truetype'), 
+                url('/fonts/open-sans-v27-latin-700.svg#OpenSans') format('svg'); 
             }
             body {
                 font-family: 'Open Sans', sans-serif;
@@ -639,83 +634,4 @@
                     font-family: 'Open Sans', sans-serif;
                 }
             }
-        </style>
-</head>
-<body style="margin:0px; padding:0px;">
-    <div style="display:flex; flex-direction:row;margin:0px; padding:0px;">
-    <div class="container">
-        <a href="index.html"><button style="padding-top:30px;">&#8592;Back to Home Page</button></a>
-        <h2>Designing a Scalable Enterprise Design System for Government Financial Platforms</h2>
-        <div class="paragraph">
-            <p>The existing design system had been at a proof-of-concept stage for several years. It was created quickly with a skeleton set of components. It required a lot of custom design and implementation work. The existing design system also did not explicitly support any level of accessiblity.</p>
-            <p><strong>Overview</strong><br>
-                I led staff-level design ownership for a multi-product government SaaS platform serving 100+ agencies. My work focused on improving usability, delivery speed, and cross-product consistency through design system leadership and end-to-end workflow design.
-            </p> 
-            <p><strong>Context</strong><br>
-                Accela’s municipal finance and operations platform supported complex workflows including general ledger, permitting, payroll, and reporting.
-The ecosystem included multiple legacy systems, inconsistent UX patterns, and distributed product teams.<br>
-                This created:
-                <ol>
-                    <li>High cognitive load for users</li>
-                    <li>Slow delivery cycles</li>
-                    <li>Inconsistent experiences</li>
-                    <li>Increased defect rates</li>
-                </ol>
-            </p>     
-            <p><strong>My Role</strong><br>
-                Staff Product Designer and program-level design lead.<br>
-                I was responsible for:
-                <ul>
-                    <li>End-to-end UX ownership across major workflows</li>
-                    <li>Design system strategy and governance</li>
-                    <li>Prototyping complex financial workflows</li>
-                    <li>Influencing product direction with leadership</li>
-                    <li>Aligning design, product, and engineering teams</li>
-                </ul>
-            </p>  
-            <p><strong>Approach</strong><br> 
-            1. Design System Strategy
-                <ul>
-                    <li>Defined component architecture and standards</li>
-                    <li>Built reusable patterns across products</li>
-                    <li>Established governance and contribution model</li>
-                    <li>Enabled adoption across multiple teams</li>
-                </ul>
-            2. Workflow & Interaction Design
-            <ul>
-                    <li>Designed complex financial workflows (GL, AP/AR, payroll)</li>
-                    <li>Simplified navigation and task flows</li>
-                    <li>Built interactive prototypes for validation</li>
-                    <li>Partnered with engineering through implementation</li>
-                </ul>
-            3. Cross-Team Influence
-            <ul>
-                    <li>Worked with product leadership to prioritize UX improvements</li>
-                    <li>Aligned multiple teams on shared patterns</li>
-                    <li>Advocated for usability and consistency</li>
-                    <li>Introduced reusable solution templates</li>
-                </ul>
-            </p>    
-            <p><strong>Impact</strong><br> 
-                <ul>
-                    <li>120% increase in design system adoption</li>
-                    <li>15% reduction in UX defects per release</li>
-                    <li>19% improvement in usability scores (SUS)</li>
-                    <li>Accelerated delivery through reusable patterns</li>
-                    <li>Improved cross-product consistency and scalability</li>
-                </ul>
-            </p>    
-                <p><strong>Why This Matters</strong><br> 
-                    This work required influencing product direction, aligning multiple teams, and owning experience quality across a complex ecosystem — not just producing interface designs.
-                    </p> 
-        </div>
-        <a href="index.html"><button style="padding-top:30px;">&#8592;Back to Home Page</button></a>
-    </div>
-    <div class="exhibit">
-        <div><img src="Storybook.png"></div>
-        <div><img src="Prime.jpg"></div>
-        <div><img src="Angular.png"></div>
-    </div>   
-</div>
-</body>
-</html>
+        
