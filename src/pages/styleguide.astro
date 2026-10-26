@@ -1,0 +1,116 @@
+---
+// Living reference for the design system: every token and component in one place.
+// Not linked from the site and kept out of search results and the sitemap.
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Button from '../components/Button.astro';
+
+const colors = [
+  ['--color-paper', 'Page background'],
+  ['--color-surface', 'Cards, header'],
+  ['--color-surface-sunk', 'Image wells, quiet panels'],
+  ['--color-ink', 'Text, primary buttons'],
+  ['--color-ink-muted', 'Secondary text'],
+  ['--color-ink-subtle', 'Captions and meta'],
+  ['--color-line', 'Borders'],
+  ['--color-accent', 'Links, eyebrows, focus'],
+  ['--color-accent-soft', 'Tag background'],
+  ['--gradient-brand', 'Wordmark and brand bar only'],
+];
+const type = [
+  ['--text-3xl', 'Page title', 'display'],
+  ['--text-2xl', 'Section title', 'display'],
+  ['--text-xl', 'Subhead, card title', 'display'],
+  ['--text-lg', 'Lede', 'body'],
+  ['--text-md', 'Body text', 'body'],
+  ['--text-sm', 'Captions, buttons, tags', 'body'],
+  ['--text-xs', 'Labels', 'body'],
+];
+const spaces = ['--space-1', '--space-2', '--space-3', '--space-4', '--space-5', '--space-6', '--space-7', '--space-8', '--space-9'];
+---
+<BaseLayout title="Style guide | Shon DeCamp" noindex>
+  <style>
+    .sg { max-width: var(--width-page); margin: 0 auto; padding: var(--space-7) var(--gutter) 0; }
+    .sg section { margin-bottom: var(--space-8); }
+    .sg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(170px, 1fr)); gap: var(--space-4); }
+    .sg-swatch { height: 72px; border-radius: var(--radius-md); border: 1px solid var(--color-line); margin-bottom: var(--space-2); }
+    .sg code { font-size: var(--text-xs); color: var(--color-ink-muted); }
+    .sg-row { display: flex; flex-wrap: wrap; gap: var(--space-3); align-items: center; margin-bottom: var(--space-4); }
+    .sg-type { display: grid; grid-template-columns: 10rem 1fr; gap: var(--space-4); align-items: baseline; padding: var(--space-3) 0; border-bottom: 1px solid var(--color-line); }
+    .sg-space { height: 16px; background: var(--color-accent); border-radius: 2px; }
+    @media (max-width: 600px) { .sg-type { grid-template-columns: 1fr; gap: var(--space-1); } }
+  </style>
+  <div class="sg">
+    <p class="ds-eyebrow">Design system</p>
+    <h1>Style guide</h1>
+    <p style="max-width: var(--width-prose); color: var(--color-ink-muted);">
+      Tokens live in <code>src/styles/tokens.css</code>, element defaults in <code>src/styles/base.css</code>,
+      and components in <code>src/styles/components.css</code>. Change a token and every page follows.
+    </p>
+
+    <section>
+      <h2 class="ds-section-title">Color</h2>
+      <div class="sg-grid">
+        {colors.map(([v, use]) => (
+          <div><div class="sg-swatch" style={`background: var(${v})`} /><strong style="font-size: var(--text-sm)">{use}</strong><br /><code>{v}</code></div>
+        ))}
+      </div>
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Type</h2>
+      <p>Headings use <strong>Fraunces</strong>; everything else uses <strong>Inter</strong>. Sizes scale smoothly between phone and desktop.</p>
+      {type.map(([v, use, fam]) => (
+        <div class="sg-type">
+          <code>{v}<br />{use}</code>
+          <span style={`font-size: var(${v}); font-family: var(--font-${fam}); line-height: var(--leading-tight)`}>Product leadership that ships</span>
+        </div>
+      ))}
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Spacing</h2>
+      {spaces.map((v) => (
+        <div class="sg-row"><code style="width: 6rem">{v}</code><div class="sg-space" style={`width: var(${v})`} /></div>
+      ))}
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Buttons and links</h2>
+      <div class="sg-row">
+        <Button href="#">Primary</Button>
+        <Button href="#" variant="secondary">Secondary</Button>
+        <Button href="#" size="sm">Small</Button>
+        <a class="ds-link" href="#">Text link &#8594;</a>
+      </div>
+      <p><code>&lt;Button href="..." variant="secondary"&gt;</code> in Astro files, or <code>class="ds-btn ds-btn--primary"</code> in plain HTML.</p>
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Labels</h2>
+      <p class="ds-eyebrow">Eyebrow label</p>
+      <div class="sg-row"><span class="ds-tag">Tag</span><span class="ds-tag">Platform</span><span class="ds-tag">0 to 1</span></div>
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Cards and stats</h2>
+      <div class="sg-grid" style="grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));">
+        <a class="ds-card" href="#">
+          <span class="ds-stat-value">+120%</span>
+          <span class="ds-stat-label">Example stat card</span>
+          <em class="ds-stat-source">Source</em>
+        </a>
+        <div class="ds-card">
+          <h3 style="font-size: var(--text-lg)">Static card</h3>
+          <p style="margin: 0; font-size: var(--text-sm); color: var(--color-ink-muted);">Surface, line border, large radius and a soft shadow.</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <h2 class="ds-section-title">Section title</h2>
+      <p>Every home section title carries the short gradient bar above it. Add <code>ds-section-title</code> to an h2.</p>
+      <h3 class="ds-subhead">Subhead</h3>
+      <p>Use <code>ds-subhead</code> on an h3 inside a section.</p>
+    </section>
+  </div>
+</BaseLayout>

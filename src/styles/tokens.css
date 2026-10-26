@@ -1,0 +1,88 @@
+/* Design tokens: the single source for color, type, spacing and shape.
+   Change a value here and every page follows. Direction: "Signature, refined":
+   warm paper, deep ink, one magenta accent, and the orange-to-magenta gradient
+   reserved for the wordmark and small brand marks. */
+
+:root {
+  /* Color: base */
+  --color-paper: #fbfaf7;        /* page background */
+  --color-surface: #ffffff;      /* cards, header */
+  --color-surface-sunk: #f4f1ea; /* quiet panels, image wells */
+  --color-ink: #1b1d2a;          /* headings and body text */
+  --color-ink-muted: #4a4e5e;    /* secondary text (7.9:1 on paper) */
+  --color-ink-subtle: #6b6f7d;   /* captions, meta (4.8:1 on paper) */
+  --color-line: #e6e2da;         /* borders and dividers */
+  --color-line-strong: #cfc9bd;
+
+  /* Color: brand */
+  --color-accent: #b4246e;        /* links, eyebrows, focus (5.9:1 on paper) */
+  --color-accent-hover: #8e1c57;
+  --color-accent-soft: #f6e7ef;   /* tag background */
+  --color-accent-on-soft: #8e1c57;
+  --color-brand-orange: #f2600c;
+  --color-brand-magenta: #c2179f;
+  --gradient-brand: linear-gradient(90deg, var(--color-brand-orange), var(--color-brand-magenta));
+
+  /* Color: actions */
+  --color-action: var(--color-ink);         /* primary button */
+  --color-action-hover: #33364a;
+  --color-on-action: #ffffff;
+  --color-focus: var(--color-accent);
+
+  /* Type */
+  --font-display: 'Fraunces Variable', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter Variable', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+  --text-xs: 0.8125rem;   /* 13px meta, labels */
+  --text-sm: 0.9375rem;   /* 15px captions, tags */
+  --text-md: 1.0625rem;   /* 17px body */
+  --text-lg: 1.25rem;     /* 20px lede, card titles */
+  --text-xl: clamp(1.375rem, 1.1rem + 1vw, 1.75rem);   /* h3 */
+  --text-2xl: clamp(1.75rem, 1.3rem + 1.8vw, 2.5rem);  /* h2, section titles */
+  --text-3xl: clamp(2.25rem, 1.4rem + 3.6vw, 4rem);    /* h1, hero */
+
+  --leading-tight: 1.15;
+  --leading-snug: 1.35;
+  --leading-body: 1.65;
+  --tracking-display: -0.015em;
+  --tracking-label: 0.1em;
+
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+
+  /* Space (4px base) */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  --space-9: 6rem;
+
+  /* Layout */
+  --width-page: 1200px;   /* outer content width */
+  --width-prose: 44rem;   /* comfortable reading line */
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --header-h: 64px;
+
+  /* Shape and depth */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 16px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 1px 2px rgba(27, 29, 42, 0.06);
+  --shadow-md: 0 6px 24px rgba(27, 29, 42, 0.08);
+  --shadow-lg: 0 16px 40px rgba(27, 29, 42, 0.12);
+
+  /* Motion */
+  --ease: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --duration: 160ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root { --duration: 0ms; }
+}
