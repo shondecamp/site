@@ -21,7 +21,7 @@ const glance = [
   ['Outcome', cs.outcome],
 ].filter(([, v]) => v);
 ---
-<BaseLayout title={`${cs.title} | Shon DeCamp`} bodyStyle={bodyStyle}>
+<BaseLayout title={`${cs.title} | Shon DeCamp`} description={cs.description} bodyStyle={bodyStyle}>
   <div class="site-case-intro">
     <nav class="site-breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a> / <a href="/#work">Work</a> / <span aria-current="page">{cs.title}</span>
