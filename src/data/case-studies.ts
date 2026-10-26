@@ -3,6 +3,8 @@
 export interface CaseStudy {
   href: string;
   title: string;
+  /** One sentence for search results and link previews. */
+  description?: string;
   company?: string;
   role?: string;
   timeline?: string;
@@ -14,35 +16,53 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
+    href: '/ReferAFriend.html',
+    title: 'Refer-a-Friend: Turning Hidden Demand into a Measured Launch',
+    description:
+      'How Shon DeCamp found hidden referral demand in customer data, chose and scoped a lean v1, managed launch risks, and measured the outcome.',
+    company: 'Melaleuca: The Wellness Company',
+    role: 'Senior Digital Product Manager',
+    platform: 'E-commerce web',
+    outcome: 'Measured lift in referrals and new enrollments',
+  },
+  {
     href: '/SorensonRearchitecture.html',
-    title: 'Re-Architecting a Workforce and Accessibility Platform',
+    title: 'Re-Architecting an Interpreter Scheduling Platform',
+    description:
+      'Product management for the re-architecture of Sorenson’s interpreter scheduling platform: average monthly downtime from 9.7 hours to 13 minutes.',
     company: 'Sorenson Communications',
     role: 'Product manager and lead designer',
     timeline: 'Aug 2018 – Jan 2020',
-    platform: 'Responsive Web',
+    platform: 'Internal web platform',
     outcome: 'Average monthly downtime from 9.7 hours to 13 minutes',
   },
   {
     href: '/Design System.html',
-    title: 'Designing a Scalable Enterprise Design System for Government Financial Platforms',
+    title: 'Founding Accela’s Company-Wide Design System Program',
+    description:
+      'Founding and leading Accela’s company-wide design system program across product, design and engineering, reaching WCAG AA compliance.',
     company: 'Accela',
-    role: 'Lead Designer, Program Manager, Product Manager, Researcher',
+    role: 'Program manager, product manager, lead designer, researcher',
     timeline: 'Feb 2023 – Jun 2024',
     platform: 'Responsive Web',
-    outcome: '120% increase in design system adoption; WCAG AA compliance',
+    outcome: 'WCAG AA compliance; 3 teams aligned on one system',
   },
   {
     href: '/CareNotes.html',
-    title: 'CareNotes',
+    title: 'InteractiveCare: Taking a Healthcare Product from 0 to 1',
+    description:
+      'Research, discovery and strategy for InteractiveCare, a 0-to-1 home health product, tested with about two dozen nurses.',
     company: 'InteractiveCare (Sorenson)',
-    role: 'UX Strategist, sole UX resource',
+    role: 'Product strategist, sole UX resource',
     timeline: 'Jan 2018 – Aug 2018',
     platform: 'Native Mobile App',
-    outcome: '0-1 Startup Product Launch',
+    outcome: 'Tested 0-to-1 concept with about two dozen nurses',
   },
   {
     href: '/Checklist.html',
-    title: 'Mobile Checklists',
+    title: 'Mobile Inspection Checklists',
+    description:
+      'Redesigning inspection checklists in the Accela Mobile app after testing concepts with field inspectors: active users up 20%, CSAT up 10%.',
     company: 'Accela',
     role: 'Lead Product Designer',
     platform: 'Enterprise Mobile App',
@@ -51,10 +71,11 @@ export const caseStudies: CaseStudy[] = [
   {
     href: '/Inspection Groups.html',
     title: 'Inspection Groups',
+    description:
+      'Remapping data relationships and redesigning Accela’s inspection group admin screens: System Usability Score up 12%.',
     company: 'Accela',
     role: 'Lead Product Designer',
     platform: 'Responsive Web App',
     outcome: 'System Usability Score up 12%',
-    listed: false,
   },
 ];
