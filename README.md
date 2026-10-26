@@ -16,8 +16,12 @@ Astro turns the files in this repo into plain HTML and CSS. A GitHub Action (`.g
 | Top navigation and contact footer (every page) | `src/components/SiteHeader.astro`, `src/components/SiteFooter.astro` |
 | Case study template (breadcrumb, title, at-a-glance box, previous/next links) | `src/layouts/CaseStudyLayout.astro` |
 | Case study facts and reading order (company, role, timeline, platform, outcome) | `src/data/case-studies.ts` |
-| Styles for the shared header, footer, home sections and case study template | `src/styles/site.css` |
-| Page styles | `src/styles/pages/*.css` |
+| Design tokens: colors, fonts, type sizes, spacing, corners, shadows | `src/styles/tokens.css` |
+| Default look of headings, text, links and lists | `src/styles/base.css` |
+| Components: buttons, cards, tags, header, footer, timeline, case study template | `src/styles/components.css` |
+| Home page and case study page layouts | `src/styles/layouts/*.css` |
+| Button component for Astro files | `src/components/Button.astro` |
+| Old per-page styles (no longer loaded; kept for reference) | `src/styles/pages/*.css` |
 | Images, PDFs, fonts and other files served as-is | `public/` (a file at `public/Resume.pdf` is served at `/Resume.pdf`) |
 | Custom domain | `public/CNAME` and repo **Settings → Pages** |
 
@@ -29,6 +33,12 @@ Astro turns the files in this repo into plain HTML and CSS. A GitHub Action (`.g
 4. Add a card for it in the Selected Work section of `src/page-bodies/index.html`.
 
 Every page keeps its original URL, for example `/CareNotes.html` and `/Design System.html`.
+
+## Design system
+
+Every color, font size and spacing value is a token in `src/styles/tokens.css`. Change a token and every page follows. To see all tokens and components in one place, open [/styleguide.html](https://shondecamp.com/styleguide.html) (it is not linked from the site and is hidden from search engines).
+
+In page bodies (plain HTML) use the component classes, for example `class="ds-btn ds-btn--primary"` for a button, `ds-tag` for a tag, `ds-card` for a card and `ds-section-title` on a home section heading. Fonts (Space Grotesk for headings, Inter for text) are installed with npm and served from the site itself.
 
 ## Editing in the browser (no setup)
 

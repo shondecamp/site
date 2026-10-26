@@ -4,6 +4,7 @@
 import BaseLayout from './BaseLayout.astro';
 import CaseStudyNav from '../components/CaseStudyNav.astro';
 import { caseStudies } from '../data/case-studies';
+import '../styles/layouts/case-study.css';
 
 interface Props {
   href: string;
@@ -30,6 +31,8 @@ const glance = [
       {glance.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
     </dl>
   </div>
-  <slot />
+  <div class="cs-body">
+    <slot />
+  </div>
   <CaseStudyNav href={href} />
 </BaseLayout>

@@ -6,8 +6,6 @@ export default defineConfig({
   site: 'https://shondecamp.com',
   // Emit `page.html` files so every existing URL (e.g. /CareNotes.html) keeps working.
   build: { format: 'file' },
-  integrations: [sitemap()],
-  // Ship page CSS exactly as written. A minifier would "repair" quirks the current
-  // look depends on (e.g. `margin:20` which browsers ignore). Revisit with the design system.
-  vite: { build: { cssMinify: false } },
+  // The style guide is a reference for editing the site, not a page for visitors.
+  integrations: [sitemap({ filter: (page) => !page.includes('styleguide') })],
 });

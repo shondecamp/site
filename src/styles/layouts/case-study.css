@@ -1,0 +1,40 @@
+/* Long-form page layout for case studies and How I Operate. Styles the plain
+   HTML in src/page-bodies: .container (text), .paragraph (a section), .blurb
+   (section heading and intro), .rowpic (row of images) and .exhibit (image
+   gallery shown beside the text on wide screens, wrapped with it in .cs-split). */
+
+.cs-body { max-width: var(--width-page); margin: 0 auto; padding: var(--space-7) var(--gutter) 0; }
+
+.cs-body .container { max-width: 48rem; }
+.cs-body > .container { margin-inline: auto; }
+.cs-body .container > p:first-child { font-size: var(--text-lg); color: var(--color-ink-muted); }
+
+.cs-body .paragraph { padding: var(--space-5) 0; border-top: 1px solid var(--color-line); }
+.cs-body .container > .paragraph:first-child { border-top: 0; padding-top: 0; }
+.cs-body .blurb { margin-bottom: var(--space-4); }
+.cs-body h3 { font-size: var(--text-xl); margin: 0 0 var(--space-3); }
+.cs-body h3::first-letter { text-transform: uppercase; }
+.cs-body .paragraph > p > strong:first-child { font-family: var(--font-display); font-size: var(--text-lg); font-weight: var(--weight-bold); color: var(--color-ink); }
+
+.cs-body .paragraph img,
+.cs-body .rowpic img,
+.cs-body .exhibit img {
+  border: 1px solid var(--color-line); border-radius: var(--radius-md); background: var(--color-surface);
+  box-shadow: var(--shadow-sm);
+}
+.cs-body .paragraph > img { margin: var(--space-5) 0; }
+
+.cs-body .rowpic { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: var(--space-3); margin: var(--space-5) 0; }
+.cs-body .rowpic img { width: 100%; }
+
+.cs-body .exhibit { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: var(--space-4); align-items: start; margin-top: var(--space-6); }
+.cs-body .exhibit > div { margin: 0; }
+.cs-body .exhibit img { width: 100%; }
+
+@media (min-width: 1024px) {
+  .cs-split:has(> .exhibit) { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-8); align-items: start; }
+  .cs-split .exhibit { margin-top: 0; }
+}
+@media (max-width: 600px) {
+  .cs-body .rowpic { grid-template-columns: 1fr; }
+}

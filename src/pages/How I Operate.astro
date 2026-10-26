@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import '../styles/pages/how-i-operate.css';
+import '../styles/layouts/case-study.css';
 import body from '../page-bodies/how-i-operate.html?raw';
 ---
 <BaseLayout title="How I Operate as a Staff Designer | Shon DeCamp" bodyStyle="margin:0px; padding:0px;">
@@ -10,5 +10,7 @@ import body from '../page-bodies/how-i-operate.html?raw';
     </nav>
     <h1 class="site-page-title">How I Operate as a Staff Designer</h1>
   </div>
-  <Fragment set:html={body} />
+  <div class="cs-body">
+    <Fragment set:html={body} />
+  </div>
 </BaseLayout>

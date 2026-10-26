@@ -1,6 +1,8 @@
 ---
 // Top navigation on every page. On the home page the links scroll to sections;
 // elsewhere they lead back to those sections on the home page.
+import Button from './Button.astro';
+
 interface Props {
   home?: boolean;
 }
@@ -16,11 +18,11 @@ const resume = '/Shon DeCamp Resume.pdf';
 ---
 <header class="site-header">
   <div class="site-header-inner">
-    <a class="site-brand" href="/">Shon DeCamp</a>
+    <a class="site-brand ds-wordmark" href="/">Shon DeCamp</a>
     <nav class="site-nav" aria-label="Main">
       <ul class="site-nav-links">
         {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
-        <li><a class="site-nav-resume" href={resume} target="_blank" rel="noopener">Resume</a></li>
+        <li><Button href={resume} size="sm" newTab>Resume</Button></li>
       </ul>
       <details class="site-menu">
         <summary>Menu</summary>

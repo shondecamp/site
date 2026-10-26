@@ -1,0 +1,16 @@
+---
+// Link styled as a button. variant: primary (filled ink) or secondary (outlined).
+interface Props {
+  href: string;
+  variant?: 'primary' | 'secondary';
+  size?: 'md' | 'sm';
+  newTab?: boolean;
+}
+const { href, variant = 'primary', size = 'md', newTab = false } = Astro.props;
+---
+<a
+  class:list={['ds-btn', `ds-btn--${variant}`, size === 'sm' && 'ds-btn--sm']}
+  href={href}
+  target={newTab ? '_blank' : undefined}
+  rel={newTab ? 'noopener' : undefined}
+><slot /></a>
