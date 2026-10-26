@@ -8,6 +8,8 @@ export interface CaseStudy {
   timeline?: string;
   platform?: string;
   outcome?: string;
+  /** false keeps the page live but out of previous/next links (and off the home page). */
+  listed?: boolean;
 }
 
 export const caseStudies: CaseStudy[] = [
@@ -18,7 +20,7 @@ export const caseStudies: CaseStudy[] = [
     role: 'Product manager and lead designer',
     timeline: 'Aug 2018 – Jan 2020',
     platform: 'Responsive Web',
-    outcome: 'Reduced downtime, improved onboarding and adoption, enabled scalability',
+    outcome: 'Average monthly downtime from 9.7 hours to 13 minutes',
   },
   {
     href: '/Design System.html',
@@ -53,5 +55,6 @@ export const caseStudies: CaseStudy[] = [
     role: 'Lead Product Designer',
     platform: 'Responsive Web App',
     outcome: 'System Usability Score up 12%',
+    listed: false,
   },
 ];
