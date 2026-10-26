@@ -1,0 +1,17 @@
+---
+// Previous / next case study links plus a way back to all work.
+import { caseStudies } from '../data/case-studies';
+interface Props {
+  href: string;
+}
+const listed = caseStudies.filter((c) => c.listed !== false);
+const i = listed.findIndex((c) => c.href === Astro.props.href);
+// An unlisted page still gets "All work" but no previous/next.
+const prev = i > 0 ? listed[i - 1] : undefined;
+const next = i >= 0 && i < listed.length - 1 ? listed[i + 1] : undefined;
+---
+<nav class="site-case-nav" aria-label="More case studies">
+  {prev ? <a class="site-case-prev" href={prev.href}><span>Previous</span>{prev.title}</a> : <span />}
+  <a class="site-case-all" href="/#work">All work</a>
+  {next ? <a class="site-case-next" href={next.href}><span>Next</span>{next.title}</a> : <span />}
+</nav>

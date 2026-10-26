@@ -861,3 +861,50 @@
             height: 200px !important;
         }
     }
+
+    /* Home page heading levels: the name is the page's h1 and sections are h2,
+       styled to match the look they had as h2 and h3. Placeholder until the design system. */
+    h1.hero-name{
+        font-size:12vw !important;
+        margin:0 0 50px 0 !important;
+        padding:0 !important;
+        line-height:1.1 !important;
+        font-weight:300 !important;
+        font-family: "Old Standard TT", serif;
+        background-image: linear-gradient(60deg, #FF6B00, #CD02D1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+    }
+    h2.section-title{
+        font-size: 30px !important;
+        line-height:1.2;
+        text-transform: uppercase;
+        margin:20px 0 !important;
+        padding:0;
+        font-weight:700 !important;
+        background-image: linear-gradient(60deg, #FF6B00, #CD02D1);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-family: "Old Standard TT", serif;
+    }
+    h3.site-subhead{
+        font-size: 22px !important;
+        text-transform: none !important;
+        margin:40px 0 16px 0 !important;
+        background-image: none;
+        color:#272727;
+        font-family: 'Open Sans', sans-serif;
+        font-weight:600;
+    }
+    /* Phones: let the hero's role line wrap instead of overlapping the text below it. */
+    @media only screen and (max-width: 760px) {
+        .title{ margin-top: 8vh !important; }
+        .title .buttons, .title .buttons a{ height:auto; line-height:1.3; display:block; }
+        .title .buttons{ display:flex; }
+        .title .p1{ font-size:28px !important; line-height:1.25 !important; margin:0 0 16px !important; }
+        .title .p2{ padding:0; margin:0 0 16px; font-size:16px; }
+        .home-section .buttons, .home-section .buttons > a{ display:block; height:auto; width:auto !important; }
+        .home-section .buttons > a.p2{ padding:0; }
+    }

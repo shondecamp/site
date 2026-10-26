@@ -1,15 +1,23 @@
 ---
-// Shared <head> for every page. Edit site-wide meta, fonts and favicon here once.
+// Shared <head>, header and footer for every page. Edit site-wide meta, fonts,
+// navigation and contact details here (or in src/components) once.
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+import '../styles/site.css';
+
 interface Props {
   title: string;
   description?: string;
   bodyStyle?: string;
+  /** True on the home page, so nav links scroll instead of reloading. */
+  home?: boolean;
 }
 
 const {
   title,
   description = 'Portfolio of Shon DeCamp.',
   bodyStyle,
+  home = false,
 } = Astro.props;
 // Match the sitemap: clean URLs without .html (GitHub Pages serves both forms).
 const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), Astro.site);
@@ -31,6 +39,11 @@ const canonical = new URL(Astro.url.pathname.replace(/(index)?\.html$/, ''), Ast
     <slot name="head" />
   </head>
   <body style={bodyStyle}>
-    <slot />
+    <a class="site-skip" href="#main">Skip to content</a>
+    <SiteHeader home={home} />
+    <main id="main" class="site-main">
+      <slot />
+    </main>
+    <SiteFooter />
   </body>
 </html>

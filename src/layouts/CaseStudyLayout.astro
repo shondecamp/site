@@ -1,0 +1,35 @@
+---
+// One template for every case study: breadcrumb, title, at-a-glance box,
+// the page body, then previous/next links. Facts live in src/data/case-studies.ts.
+import BaseLayout from './BaseLayout.astro';
+import CaseStudyNav from '../components/CaseStudyNav.astro';
+import { caseStudies } from '../data/case-studies';
+
+interface Props {
+  href: string;
+  bodyStyle?: string;
+}
+const { href, bodyStyle } = Astro.props;
+const cs = caseStudies.find((c) => c.href === href);
+if (!cs) throw new Error(`No case study entry for ${href} in src/data/case-studies.ts`);
+const glance = [
+  ['Company', cs.company],
+  ['My role', cs.role],
+  ['Timeline', cs.timeline],
+  ['Platform', cs.platform],
+  ['Outcome', cs.outcome],
+].filter(([, v]) => v);
+---
+<BaseLayout title={`${cs.title} | Shon DeCamp`} bodyStyle={bodyStyle}>
+  <div class="site-case-intro">
+    <nav class="site-breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a> / <a href="/#work">Work</a> / <span aria-current="page">{cs.title}</span>
+    </nav>
+    <h1 class="site-page-title">{cs.title}</h1>
+    <dl class="site-glance">
+      {glance.map(([k, v]) => <div><dt>{k}</dt><dd>{v}</dd></div>)}
+    </dl>
+  </div>
+  <slot />
+  <CaseStudyNav href={href} />
+</BaseLayout>
