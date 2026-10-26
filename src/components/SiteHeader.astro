@@ -1,0 +1,34 @@
+---
+// Top navigation on every page. On the home page the links scroll to sections;
+// elsewhere they lead back to those sections on the home page.
+interface Props {
+  home?: boolean;
+}
+const { home = false } = Astro.props;
+const base = home ? '' : '/';
+const links = [
+  { label: 'Work', href: `${base}#work` },
+  { label: 'Experience', href: `${base}#experience` },
+  { label: 'Approach', href: `${base}#approach` },
+  { label: 'Contact', href: '#contact' },
+];
+const resume = '/Shon DeCamp Resume.pdf';
+---
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-brand" href="/">Shon DeCamp</a>
+    <nav class="site-nav" aria-label="Main">
+      <ul class="site-nav-links">
+        {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+        <li><a class="site-nav-resume" href={resume} target="_blank" rel="noopener">Resume</a></li>
+      </ul>
+      <details class="site-menu">
+        <summary>Menu</summary>
+        <ul>
+          {links.map((l) => <li><a href={l.href}>{l.label}</a></li>)}
+          <li><a href={resume} target="_blank" rel="noopener">Resume (PDF)</a></li>
+        </ul>
+      </details>
+    </nav>
+  </div>
+</header>

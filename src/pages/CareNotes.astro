@@ -1,8 +1,8 @@
 ---
-import BaseLayout from '../layouts/BaseLayout.astro';
+import CaseStudyLayout from '../layouts/CaseStudyLayout.astro';
 import '../styles/pages/carenotes.css';
 import body from '../page-bodies/carenotes.html?raw';
 ---
-<BaseLayout title="CareNotes | Shon DeCamp">
+<CaseStudyLayout href="/CareNotes.html">
   <Fragment set:html={body} />
-</BaseLayout>
+</CaseStudyLayout>
